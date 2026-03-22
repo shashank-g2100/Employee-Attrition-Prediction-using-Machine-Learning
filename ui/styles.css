@@ -49,6 +49,7 @@ h1, h2, h3,
 .stCaption,
 [data-testid="stCaptionContainer"] p {
     color: #64748b !important;
+    font-size: 16px !important;
 }
 
 /* Divider line */
@@ -962,7 +963,7 @@ div[data-baseweb="select"] svg {
 /* X on chip */
 [data-testid="stMultiSelect"] [data-baseweb="tag"] span[role="presentation"] {
     color: #64748b !important;
-    font-size: 16px !important;
+    font-size: 20px !important;
     margin-left: 4px !important;
 }
 [data-testid="stMultiSelect"] [data-baseweb="tag"] span[role="presentation"]:hover {

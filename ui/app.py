@@ -3324,8 +3324,8 @@ import joblib
 import os
 
 st.set_page_config(
-    page_title="HR Attrition Analytics",
-    page_icon="📊",
+    page_title="PeopleIQ | AI Workforce Intelligence",
+    page_icon="🧠",
     layout="wide"
 )
 
@@ -3343,8 +3343,8 @@ with open(css_path, encoding="utf-8") as f:
 # ─────────────────────────────────────────────
 # PAGE HEADER
 # ─────────────────────────────────────────────
-st.title("HR Attrition Analytics Platform")
-st.caption("AI driven workforce analytics and attrition prediction system")
+st.title("PeopleIQ – AI Workforce Intelligence Platform")
+st.caption("Predict employee attrition and generate HR intelligence using machine learning")
 st.divider()
 
 
@@ -3533,16 +3533,16 @@ if page == "Prediction":
 # ══════════════════════════════════════════════
 if page == "Analytics Dashboard":
 
-    # ── Top bar ─────────────────────────────
-    st.markdown("""
-    <div class="topbar">
-        <div>
-            <h1>Workforce Analytics Dashboard</h1>
-            <p>Upload your HR dataset to generate predictions and insights</p>
-        </div>
-        <div class="badge-active"><span class="badge-dot"></span> Ready</div>
-    </div>
-    """, unsafe_allow_html=True)
+    # # ── Top bar ─────────────────────────────
+    # st.markdown("""
+    # <div class="topbar">
+    #     <div>
+    #         <h1>Workforce Analytics Dashboard</h1>
+    #         <p>Upload your HR dataset to generate predictions and insights</p>
+    #     </div>
+    #     <div class="badge-active"><span class="badge-dot"></span> Ready</div>
+    # </div>
+    # """, unsafe_allow_html=True)
 
     # ── File upload ──────────────────────────
     file = st.file_uploader("Upload HR Dataset", type=["csv"])
@@ -3637,7 +3637,7 @@ if page == "Analytics Dashboard":
         st.divider()
 
         # ── Workforce Insights heading + inline Department filter ──
-        ins_col, filt_col = st.columns([1, 1])
+        ins_col, filt_col = st.columns([2, 1])
         with ins_col:
             st.markdown("""
             <div class="workforce-heading">
@@ -3841,7 +3841,7 @@ if page == "Analytics Dashboard":
         # ── Export ────────────────────────────
         st.subheader("Export Results")
         st.download_button(
-            "⬇ Download Predictions",
+            "Download Predictions",
             filtered_df.to_csv(index=False),
             "attrition_results.csv"
         )
@@ -3850,4 +3850,6 @@ if page == "Analytics Dashboard":
 # FOOTER
 # ─────────────────────────────────────────────
 st.divider()
-st.caption("HR Attrition Analytics Platform | Built with FastAPI & Streamlit")
+st.caption(
+"PeopleIQ Workforce Intelligence Platform | ML Powered HR Decision Support | Built with FastAPI & Streamlit"
+)
