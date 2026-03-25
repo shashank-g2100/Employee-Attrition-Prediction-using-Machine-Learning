@@ -634,7 +634,11 @@ if page == "Prediction":
                 "JobRole": "Sales Executive", "MaritalStatus": "Single", "OverTime": overtime
             }
             try:
-                resp       = requests.post("http://127.0.0.1:8000/predict", json=payload, timeout=5)
+                resp = requests.post(
+                    "https://peopleiq-ai-workforce-intelligence.onrender.com/predict",
+                    json=payload
+                )
+
                 result     = resp.json()
                 prediction = result["Prediction"]
                 probability= result["Probability"]
